@@ -1,6 +1,6 @@
 # thesis_final_rms_calculator.py
 # Calculates BOTH photometric and astrometric RMS for your thesis
-# Works with AstroImageJ, Siril, ASTAP — just change the file names
+# Works with  Siril, ASTAP, AstroArt — just change the file names
 
 import numpy as np
 from astropy.io import fits, ascii
@@ -9,17 +9,17 @@ from astropy.coordinates import SkyCoord
 import os
 
 # CHANGE THESE FOR EACH SOFTWARE
-software = "AstroImageJ"  # ← change to "Siril", "ASTAP", etc.
+software = "Siril"  # ← change to "Siril", "ASTAP", etc.
 calibrated_dir = "thesis_test_dataset"  # folder with solved FITS files
 truth = ascii.read(os.path.join(calibrated_dir, "truth_catalog.csv"))
 
 # Your 5 solved FITS files (rename as needed)
 solved_files = [
-    f"{calibrated_dir}/AIJ_calibrated_01.fits",
-    f"{calibrated_dir}/AIJ_calibrated_02.fits",
-    f"{calibrated_dir}/AIJ_calibrated_03.fits",
-    f"{calibrated_dir}/AIJ_calibrated_04.fits",
-    f"{calibrated_dir}/AIJ_calibrated_05.fits",
+    f"{calibrated_dir}/Siril_calibrated_01.fits",
+    f"{calibrated_dir}/Siril_calibrated_02.fits",
+    f"{calibrated_dir}/Siril_calibrated_03.fits",
+    f"{calibrated_dir}/Siril_calibrated_04.fits",
+    f"{calibrated_dir}/Siril_calibrated_05.fits",
 ]
 
 # Your exported photometry tables (from Multi-Aperture or equivalent)
